@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Correct style for checkbox</title>
+  </head>
+  <body>
+    <style>
+      .check {
+        padding-left: 1.2em;
+      }
+
+      .checkbox__option {
+        display: block;
+        margin-bottom: 0.25em;
+      }
+
+      .check__input {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        /*or*/
+        /* position: absolute; 
+        opacity: 0; */
+      }
+
+      .check__box {
+        position: absolute;
+        margin-top: 0.2em;
+        margin-left: -1em;
+        width: 0.6em;
+        height: 0.6em;
+        box-shadow: 0 0 0 0.1em #4a90e2;
+        border-radius: 0.05em;
+        background-color: white;
+      }
+
+      /*checked*/
+
+      .check__input:checked + .check__box {
+        background-color: #4a90e2;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpolyline fill='none' stroke='%23fff' stroke-width='3' points='1.079 4.999 5 9 10.837 2'/%3E%3C/svg%3E");
+      }
+
+      /*focused*/
+
+      .check__input:focus + .check__box {
+        box-shadow: 0 0 0 0.1em #4a90e2, 0 0 0 0.2em #7ed321;
+      }
+
+      .check__input:checked:focus + .check__box {
+      }
+
+      /*disabled*/
+
+      .check__input:disabled + .check__box {
+        box-shadow: 0 0 0 0.1em #9b9b9b;
+      }
+
+      .check__input:checked:disabled + .check__box {
+        background-color: #9b9b9b;
+      }
+    </style>
+
+    <h1>Lesson #1</h1>
+    <h2>Correct style for checkbox</h2>
+
+    <label class="check checkbox__option">
+      <input type="checkbox" class="check__input" />
+      <span class="check__box"></span>
+      first
+    </label>
+
+    <label class="check checkbox__option">
+      <input checked type="checkbox" class="check__input" />
+      <span class="check__box"></span>
+      second
+    </label>
+
+    <label class="check checkbox__option">
+      <input disabled checked type="checkbox" class="check__input" />
+      <span class="check__box"></span>
+      third
+    </label>
+
+    <label class="check checkbox__option">
+      <input type="checkbox" disabled class="check__input" />
+      <span class="check__box"></span>
+      forth
+    </label>
+
+    <textarea style="width: 100%; height: 110em; overflow-y: hidden;font-size: 10px;" disabled>
+ 
+    <style>
+      .check {
+        padding-left: 1.2em;
+      }
+
+      .checkbox__option {
+        display: block;
+        margin-bottom: 0.25em;
+      }
+
+      .check__input {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        /*or*/
+        /* position: absolute; 
+        opacity: 0; */
+      }
+
+      .check__box {
+        position: absolute;
+        margin-top: 0.2em;
+        margin-left: -1em;
+        width: 0.6em;
+        height: 0.6em;
+        box-shadow: 0 0 0 0.1em #4a90e2;
+        border-radius: 0.05em;
+        background-color: white;
+      }
+
+      /*checked*/
+
+      .check__input:checked + .check__box {
+        background-color: #4a90e2;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpolyline fill='none' stroke='%23fff' stroke-width='3' points='1.079 4.999 5 9 10.837 2'/%3E%3C/svg%3E");
+      }
+
+      /*focused*/
+
+      .check__input:focus + .check__box {
+        box-shadow: 0 0 0 0.1em #4a90e2, 0 0 0 0.2em #7ed321;
+      }
+
+      .check__input:checked:focus + .check__box {
+      }
+
+      /*disabled*/
+
+      .check__input:disabled + .check__box {
+        box-shadow: 0 0 0 0.1em #9b9b9b;
+      }
+
+      .check__input:checked:disabled + .check__box {
+        background-color: #9b9b9b;
+      }
+  </style>
+
+    <h1>Lesson #1</h1>
+    <h2>Correct style for checkbox</h2>
+ 
+  <label class="check checkbox__option">
+    <input type="checkbox" class="check__input">
+    <span class="check__box"></span>
+    first
+  </label>
+
+  <label class="check checkbox__option">
+    <input checked type="checkbox" class="check__input">
+    <span class="check__box"></span>
+    second
+  </label>
+
+  <label class="check checkbox__option">
+    <input disabled checked type="checkbox" class="check__input">
+    <span class="check__box"></span>
+    third
+  </label>
+
+  <label class="check checkbox__option">
+    <input type="checkbox" disabled class="check__input">
+    <span class="check__box"></span>
+    forth
+  </label>
+    
+  </textarea>
+  </body>
+</html>
